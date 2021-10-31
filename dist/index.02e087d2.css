@@ -1,0 +1,103 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  background-color: white;
+  color: #2d3249;
+}
+
+section {
+  width: 100%;
+}
+
+h1, h2, h3, h4 {
+  color: #272343;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+.main .playerInfo {
+  background-color: #bae8e8;
+  padding: 0 2.5em;
+}
+.main .playerInfo .player-stats {
+  border-bottom: 2px solid black;
+  width: 80%;
+}
+.main .halloweenGameBoard {
+  text-align: center;
+  background-color: #f39344;
+  padding: 1em 1.5em;
+}
+.main .halloweenGameBoard .spooky-title {
+  margin: 0;
+}
+.main .halloweenGameBoard .newGameBtn {
+  width: 25vw;
+  height: 5vh;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: none;
+  border-radius: 0.25em;
+  background-color: #272343;
+  color: #ffda05;
+  cursor: pointer;
+}
+.main .halloweenGameBoard .gameBoard {
+  margin: 2.5em 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  border: 2px solid black;
+}
+.main .halloweenGameBoard .gameBoard .boardCell {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border: 2px solid black;
+  perspective: 1000px;
+}
+.main .halloweenGameBoard .gameBoard .boardCell .boardCellflip {
+  transform: rotateY(180deg);
+}
+.main .halloweenGameBoard .gameBoard .boardCell .boardCellflipped {
+  transform: rotateY(0deg) !important;
+}
+.main .halloweenGameBoard .gameBoard .boardCell .boardCell-inner {
+  position: relative;
+  width: 150px;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.main .halloweenGameBoard .gameBoard .boardCell .boardCell-inner .mem-card {
+  width: 100%;
+  height: 100%;
+}
+.main .halloweenGameBoard .gameBoard .boardCell .boardCell-inner .mem-card_back {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotateY(180deg);
+  display: grid;
+  place-items: center;
+  background-color: #bae8e8;
+  color: #2d3249;
+  backface-visibility: hidden;
+}
+.main .halloweenGameBoard .gameBoard .boardCell .boardCell-inner .mem-card_back .mem-card_back_number {
+  font-size: 1.5rem;
+}
+/*# sourceMappingURL=index.02e087d2.css.map */
